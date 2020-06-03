@@ -11,6 +11,8 @@ use Illuminate\Support\Str;
 // Import Db Island
 use App\Models\Island;
 
+use Auth;
+
 
 
 class BerandaController extends Controller
@@ -43,8 +45,13 @@ class BerandaController extends Controller
             $data['img'] = $name;
         }
 
-        $request->user()->islands()->create($data);
 
+        if (Auth::check()) {
+            $data['user_id'] = Auth::user()->id;
+        } else  $data['user_id'] = 1;
+        
+        Island::create($data);
+        
         return redirect('/beranda')->with('msg', 'Data Berhasil Ditambahkan');
 
         

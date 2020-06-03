@@ -19,7 +19,6 @@
                 <div class="card-body">
                     <h4 class="card-title"><a href="/beranda/{{$data->slug}}">{{$data->island}}</a></h4>
                     <p class="card-text">{{Str::limit($data->description, 300) }}</p>
-                     
                     
                     @if ($data->author())
                         

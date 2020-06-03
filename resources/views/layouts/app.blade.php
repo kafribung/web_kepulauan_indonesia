@@ -55,6 +55,12 @@
                                 <a class="nav-link {{Request()->is('about') ? 'active' : ''}}" href="/about">About</a>
                             </li>
                             <li class="nav-item">
+                                <a class="nav-link {{Request()->is('beranda/create') ? 'active' : ''}}" href="/beranda/create">Add_Data[Log]</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{Request()->is('/beranda/create/no-log') ? 'active' : ''}}" href="/beranda/create/no-log">Add_Data[NOLog]</a>
+                            </li>
+                            <li class="nav-item">
                                 <a class="nav-link {{Request()->is('login') ? 'active' : ''}}" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                             @if (Route::has('register'))
@@ -68,6 +74,9 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{Request()->is('about') ? 'active' : ''}}" href="/about">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {{Request()->is('beranda/create') ? 'active' : ''}}" href="/beranda/create">Add_Data[Log]</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link {{Request()->is('beranda/create') ? 'active' : ''}}" href="/beranda/create">Add_Data</a>
